@@ -318,10 +318,10 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                           ])),
                     ),
-
+/*
                     if(socialStatus!.isFacebook! || socialStatus.isGoogle!)
                       const Center(child: SocialLoginWidget()),
-
+*/
 
                     Center(child: Text(getTranslated('OR', context)!, style: poppinsRegular.copyWith(fontSize: 12))),
 

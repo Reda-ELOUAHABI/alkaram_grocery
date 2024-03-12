@@ -26,7 +26,7 @@ class Images {
   static const String aboutUs = 'assets/image/about_us.png';
   static const String privacy = 'assets/image/privacy.png';
   static const String lock = 'assets/image/lock.png';
-  static const String grofreshText = 'assets/image/GroFresh.png';
+  static const String grofreshText = 'assets/image/GroFresh.png'; //unused
   static const String search = 'assets/image/search.png';
   static const String profile = 'assets/image/profile.png';
   static const String notification = 'assets/image/notification.png';
@@ -35,6 +35,7 @@ class Images {
   static const String login = 'assets/image/login.png';
   static const String close = 'assets/image/clear.png';
   static const String arabicFlag = 'assets/image/arabic.png';
+  static const String frenchFlag = 'assets/image/french.png';
   static const String support = 'assets/image/support.png';
   static const String profilePlaceholder = 'assets/image/pro_place_holder.png';
   static const String google = 'assets/image/google.png';

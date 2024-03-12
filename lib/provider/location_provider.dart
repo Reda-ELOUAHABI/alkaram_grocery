@@ -21,8 +21,8 @@ class LocationProvider with ChangeNotifier {
 
   LocationProvider({required this.sharedPreferences, this.locationRepo});
 
-  Position _position = Position(longitude: 0, latitude: 0, timestamp: DateTime.now(), accuracy: 1, altitude: 1, heading: 1, speed: 1, speedAccuracy: 1);
-  Position _pickPosition = Position(longitude: 0, latitude: 0, timestamp: DateTime.now(), accuracy: 1, altitude: 1, heading: 1, speed: 1, speedAccuracy: 1);
+  Position _position = Position(longitude: 0, latitude: 0, timestamp: DateTime.now(), accuracy: 1, altitude: 1, heading: 1, speed: 1, speedAccuracy: 1, altitudeAccuracy: 1, headingAccuracy: 1, );
+  Position _pickPosition = Position(longitude: 0, latitude: 0, timestamp: DateTime.now(), accuracy: 1, altitude: 1, heading: 1, speed: 1, speedAccuracy: 1, altitudeAccuracy: 1, headingAccuracy: 1,);
   bool _loading = false;
   bool get loading => _loading;
   // TextEditingController _locationController = TextEditingController();
@@ -65,6 +65,7 @@ class LocationProvider with ChangeNotifier {
         latitude: double.parse('0'),
         longitude: double.parse('0'),
         timestamp: DateTime.now(), accuracy: 1, altitude: 1, heading: 1, speed: 1, speedAccuracy: 1,
+        altitudeAccuracy: 1, headingAccuracy: 1,
       );
     }
     if(fromAddress) {
@@ -95,11 +96,13 @@ class LocationProvider with ChangeNotifier {
           _position = Position(
             latitude: position!.target.latitude, longitude: position.target.longitude, timestamp: DateTime.now(),
             heading: 1, accuracy: 1, altitude: 1, speedAccuracy: 1, speed: 1,
+            altitudeAccuracy: 1, headingAccuracy: 1,
           );
         } else {
           _pickPosition = Position(
             latitude: position!.target.latitude, longitude: position.target.longitude, timestamp: DateTime.now(),
             heading: 1, accuracy: 1, altitude: 1, speedAccuracy: 1, speed: 1,
+            altitudeAccuracy: 1, headingAccuracy: 1,
           );
         }
         if (_changeAddress) {
@@ -261,6 +264,7 @@ class LocationProvider with ChangeNotifier {
     _pickPosition = Position(
       longitude: detail.result.geometry!.location.lat, latitude: detail.result.geometry!.location.lng,
       timestamp: DateTime.now(), accuracy: 1, altitude: 1, heading: 1, speed: 1, speedAccuracy: 1,
+      altitudeAccuracy: 1, headingAccuracy: 1,
     );
 
     _pickAddress = address;

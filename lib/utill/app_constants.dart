@@ -3,10 +3,10 @@ import 'package:flutter_grocery/helper/app_mode.dart';
 import 'images.dart';
 
 class AppConstants {
-  static const String appName = 'GroFresh';
+  static const String appName = 'Alkaram Viandes';
   static const double appVersion = 7.0;
   static const AppMode appMode = AppMode.release;
-  static const String baseUrl = 'https://grofresh-admin.6amtech.com';
+  static const String baseUrl = 'https://app.alkaramviandes.ma';//'https://grofresh-admin.6amtech.com';
   static const String configUri = '/api/v1/config';
   static const String bannerUri = '/api/v1/banners';
   static const String categoryUri = '/api/v1/categories';
@@ -84,7 +84,7 @@ class AppConstants {
   static const String userAddress = 'user_address';
 
   static const String searchAddress = 'search_address';
-  static const String topic = 'grofresh';
+  static const String topic = 'alkaram';// 'grofresh';
   static const String onBoardingSkip = 'on_boarding_skip';
   static const String placeOrderData = 'place_order_data';
   static const String cookingManagement = 'cookies_management';
@@ -93,5 +93,6 @@ class AppConstants {
   static List<LanguageModel> languages = [
     LanguageModel(imageUrl: Images.englandFlag, languageName: 'English', countryCode: 'US', languageCode: 'en'),
     LanguageModel(imageUrl: Images.arabicFlag, languageName: 'العربية', countryCode: 'SA', languageCode: 'ar'),
+    LanguageModel(imageUrl: Images.frenchFlag, languageName: 'français', countryCode: 'FR', languageCode: 'fr'),
   ];
 }

@@ -11,7 +11,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>GroFresh</string>
+	<string>Alkaram Viandes</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -60,7 +60,7 @@
             <string>Editor</string>
             <key>CFBundleURLSchemes</key>
             <array>
-                <string>your_CFBundleURLSchemes</string>
+                <string>457207853093-a0udeagmuqvqdq59sn42kbfpmbiv4874.apps.googleusercontent.com</string>
             </array>
         </dict>
     </array>

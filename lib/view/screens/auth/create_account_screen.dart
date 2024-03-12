@@ -133,7 +133,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                       const SizedBox(height: Dimensions.paddingSizeLarge),
 
                       // for email section
-
+/*
                       config.emailVerification!?
                       Text(
                         getTranslated('mobile_number', context)!,
@@ -196,7 +196,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                           const SizedBox(height: Dimensions.paddingSizeLarge),
 
                         ],),
-
+*/
                       // for password section
                       Text(
                         getTranslated('password', context)!,

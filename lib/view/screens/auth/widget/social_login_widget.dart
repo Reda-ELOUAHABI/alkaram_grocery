@@ -63,9 +63,12 @@ class _SocialLoginWidgetState extends State<SocialLoginWidget> {
                  InkWell(
                     onTap: () async {
                       try{
+                        debugPrint('hi auth google');
                         GoogleSignInAuthentication  auth = await authProvider.googleLogin();
-                        GoogleSignInAccount googleAccount = authProvider.googleAccount!;
 
+                        debugPrint('auth google : $auth');
+                        GoogleSignInAccount googleAccount = authProvider.googleAccount!;
+                        debugPrint('googleAccount google : $googleAccount');
                         Provider.of<AuthProvider>(Get.context!, listen: false).socialLogin(SocialLoginModel(
                           email: googleAccount.email, token: auth.idToken, uniqueId: googleAccount.id, medium: 'google',
                         ), route);
