@@ -34,7 +34,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
 
   final FocusNode _lastNameFocus = FocusNode();
 
-  final FocusNode _emailFocus = FocusNode();
+  // final FocusNode _emailFocus = FocusNode();
 
   final FocusNode _numberFocus = FocusNode();
 
@@ -50,7 +50,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
 
   final TextEditingController _numberController = TextEditingController();
 
-  final TextEditingController _emailController = TextEditingController();
+  // final TextEditingController _emailController = TextEditingController();
 
   final TextEditingController _passwordController = TextEditingController();
 
@@ -126,23 +126,29 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                         isShowBorder: true,
                         controller: _lastNameController,
                         focusNode: _lastNameFocus,
-                        nextFocus: _emailFocus,
+                        nextFocus: _passwordFocus,
                         inputType: TextInputType.name,
                         capitalization: TextCapitalization.words,
                       ),
                       const SizedBox(height: Dimensions.paddingSizeLarge),
 
                       // for email section
-/*
+
                       config.emailVerification!?
                       Text(
                         getTranslated('mobile_number', context)!,
                         style: poppinsRegular.copyWith(color: Theme.of(context).hintColor.withOpacity(0.6)),
-                      ):Text(
-                        getTranslated('email', context)!,
-                        style: poppinsRegular.copyWith(color: Theme.of(context).hintColor.withOpacity(0.6)),
+                      ):
+                      const SizedBox.shrink(),
+                      // Text(
+                      //   getTranslated('email', context)!,
+                      //   style: poppinsRegular.copyWith(color: Theme.of(context).hintColor.withOpacity(0.6)),
+                      // ),
+                      Visibility(
+                        visible: config.emailVerification!,
+                        child: const SizedBox(height: Dimensions.paddingSizeLarge),
                       ),
-                      const SizedBox(height: Dimensions.paddingSizeSmall),
+                      // const SizedBox(height: Dimensions.paddingSizeSmall),
 
                       config.emailVerification! ? Row(children: [
                         CountryCodePickerWidget(
@@ -166,15 +172,21 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                           nextFocus: config.referEarnStatus! ? _referTextFocus : _passwordFocus,
                           inputType: TextInputType.phone,
                         ),),
-                      ]) : CustomTextField(
-                        hintText: getTranslated('demo_gmail', context),
-                        isShowBorder: true,
-                        controller: _emailController,
-                        focusNode: _emailFocus,
-                        nextFocus: config.referEarnStatus! ? _referTextFocus : _passwordFocus,
-                        inputType: TextInputType.emailAddress,
+                      ]) :
+                      const SizedBox.shrink(),
+                      // CustomTextField(
+                      //   hintText: getTranslated('demo_gmail', context),
+                      //   isShowBorder: true,
+                      //   controller: _emailController,
+                      //   focusNode: _emailFocus,
+                      //   nextFocus: config.referEarnStatus! ? _referTextFocus : _passwordFocus,
+                      //   inputType: TextInputType.emailAddress,
+                      // ),
+                      Visibility(
+                        visible: config.emailVerification!,
+                        child: const SizedBox(height: Dimensions.paddingSizeLarge),
                       ),
-                      const SizedBox(height: Dimensions.paddingSizeLarge),
+                      // const SizedBox(height: Dimensions.paddingSizeLarge),
 
                       //refer code
                       if(config.referEarnStatus!)
@@ -196,7 +208,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                           const SizedBox(height: Dimensions.paddingSizeLarge),
 
                         ],),
-*/
+
                       // for password section
                       Text(
                         getTranslated('password', context)!,
@@ -260,7 +272,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                           String firstName = _firstNameController.text.trim();
                           String lastName = _lastNameController.text.trim();
                           String number = _numberController.text.trim();
-                          String email = _emailController.text.trim();
+                          // String email = _emailController.text.trim();
                           String password = _passwordController.text.trim();
                           String confirmPassword = _confirmPasswordController.text.trim();
                           if(config.emailVerification!){
@@ -298,10 +310,10 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                               showCustomSnackBar(getTranslated('enter_first_name', context)!);
                             }else if (lastName.isEmpty) {
                               showCustomSnackBar(getTranslated('enter_last_name', context)!);
-                            }else if (email.isEmpty) {
-                              showCustomSnackBar(getTranslated('enter_email_address', context)!);
-                            }else if (EmailChecker.isNotValid(email)) {
-                              showCustomSnackBar(getTranslated('enter_valid_email', context)!);
+                            // }else if (email.isEmpty) {
+                            //   showCustomSnackBar(getTranslated('enter_email_address', context)!);
+                            // }else if (EmailChecker.isNotValid(email)) {
+                            //   showCustomSnackBar(getTranslated('enter_valid_email', context)!);
                             }else if (password.isEmpty) {
                               showCustomSnackBar(getTranslated('enter_password', context)!);
                             }else if (password.length < 6) {
@@ -314,7 +326,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                               SignUpModel signUpModel = SignUpModel(
                                 fName: firstName,
                                 lName: lastName,
-                                email: email,
+                                // email: email,
                                 password: password,
                                 phone: authProvider.email.trim(),
                                 referralCode: _referTextController.text.trim(),

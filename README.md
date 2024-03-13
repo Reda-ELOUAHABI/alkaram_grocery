@@ -39,6 +39,9 @@ flutter build apk
 flutter build apk --no-shrink
 publish new version code:
 https://stackoverflow.com/questions/53570575/flutter-upgrade-the-version-code-for-play-store
+update packages : flutter upgrade
+install packages: flutter pub get
+Update Android Target SDK: Check and update the targetSdkVersion in your android/app/build.gradle file to the latest SDK version recommended by Google. This ensures compatibility with the latest Android versions.
 
 
 IOS:
