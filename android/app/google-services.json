@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:457207853093:android:dea19c85d53b62960e8fcc",
         "android_client_info": {
-          "package_name": "com.alkaram.alkaramviandes"
+          "package_name": "com.alkaram.flutter_grocery"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "457207853093-a0udeagmuqvqdq59sn42kbfpmbiv4874.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.alkaram.alkaramviandes",
+            "package_name": "com.alkaram.flutter_grocery",
             "certificate_hash": "e212f8708a6b83086b53e61dc08c4283d72cc51d"
           }
         },
@@ -42,7 +42,7 @@
               "client_id": "457207853093-ioaejr0i3h9o7et4b6g6mt4imqdrtm50.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.alkaram.alkaramviandes"
+                "bundle_id": "com.alkaram.flutter_grocery"
               }
             }
           ]
@@ -53,7 +53,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:457207853093:android:1561f42bf17e52be0e8fcc",
         "android_client_info": {
-          "package_name": "com.alkaram.alkaramviandes_delivery"
+          "package_name": "com.alkaram.flutter_grocery_delivery"
         }
       },
       "oauth_client": [
@@ -78,7 +78,7 @@
               "client_id": "457207853093-ioaejr0i3h9o7et4b6g6mt4imqdrtm50.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.alkaram.alkaramviandes"
+                "bundle_id": "com.alkaram.flutter_grocery"
               }
             }
           ]

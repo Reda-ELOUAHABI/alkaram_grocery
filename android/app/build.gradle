@@ -46,8 +46,8 @@ android {
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         //  applicationId "com.u6amtech.flutter_grocery"
-        // applicationId "com.alkaram.flutter_grocery"
-        applicationId "com.alkaram.alkaramviandes"
+        // applicationId "com.alkaram.alkaramviandes"
+        applicationId "com.alkaram.flutter_grocery"
         minSdkVersion 21
         targetSdkVersion 33
         versionCode flutterVersionCode.toInteger()

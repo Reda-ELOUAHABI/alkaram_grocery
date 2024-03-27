@@ -22,7 +22,9 @@ https://codecanyon.net/item/grofresh-grocery-pharmacy-ecommerce-store-app-and-we
 
 steps:
 
-change color, app_icon add icon language, add .json language, add it to the language list, .. se git for others ,,
+change color, app_icon add icon language, add .json language, add it to the language list and the flag of french to images, 
+.. se git for others ,,
+replace the grofresh name with the real app name
 https://docs.flutter.dev/deployment/android
 then use https://www.appicon.co/ for the mimmap , replace it and add to drawable the same icon size with the same name, the size is already included to the mimap.
 now the time for the keystore:
@@ -31,20 +33,24 @@ keytool -genkey -v -keystore \upload-keystore.jks -storetype JKS -keyalg RSA -ke
 
 password alkaram
 don't forget to put your upload-keystore into android/app even you put storeFile=upload-keystore.jks in the key-property
+add the key-property file into android
 flutter clean (to apply gradle updates)
 flutter build appbundle
 
 build apk:
 flutter build apk
 flutter build apk --no-shrink
-publish new version code:
+publish new version code: increment the 4 : version: 1.1.0+4 inside pubspec.yaml
 https://stackoverflow.com/questions/53570575/flutter-upgrade-the-version-code-for-play-store
+https://stackoverflow.com/questions/62568757/playstore-error-app-bundle-contains-native-code-and-youve-not-uploaded-debug
 update packages : flutter upgrade
 install packages: flutter pub get
 Update Android Target SDK: Check and update the targetSdkVersion in your android/app/build.gradle file to the latest SDK version recommended by Google. This ensures compatibility with the latest Android versions.
-
+privacy policy : 
+https://raw.githubusercontent.com/Reda-ELOUAHABI/Cplusplus-cpp-multidimentional_array/master/alkaram_viandes.txt
 
 IOS:
+you can build and release IOS online via: https://codemagic.io/
 https://www.linkedin.com/pulse/publishing-flutter-app-apple-store-yogesh-aswar/
 https://docs.flutter.dev/deployment/ios
 
