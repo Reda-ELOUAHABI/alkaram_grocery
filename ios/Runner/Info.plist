@@ -69,7 +69,7 @@
     <key>FacebookClientToken</key>
     <string>CLIENT-TOKEN</string>
     <key>FacebookDisplayName</key>
-    <string>Grofresh</string>
+    <string>Alkaram</string>
     <key>LSApplicationQueriesSchemes</key>
     <array>
       <string>fbapi</string>
